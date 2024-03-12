@@ -42,11 +42,11 @@ const routes = [
         component: () => import("@/views/Register.vue")
     },
 
-    {
-        path: "/cart",
-        name: "cart",
-        component: () => import("@/views/Cart.vue")
-    },
+    // {
+    //     path: "/cart",
+    //     name: "cart",
+    //     component: () => import("@/views/Cart.vue")
+    // },
 
     {
         path: "/productdetail/:id",
