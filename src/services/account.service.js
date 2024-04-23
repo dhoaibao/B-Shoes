@@ -15,6 +15,9 @@ class AccountService {
     async get(id) {
         return (await this.api.get(`/${id}`)).data;
     }
+    async getByPhone(phone) {
+        return (await this.api.get(`/phone/${phone}`)).data;
+    }
     async update(id, data) {
         return (await this.api.put(`/${id}`, data)).data;
     }

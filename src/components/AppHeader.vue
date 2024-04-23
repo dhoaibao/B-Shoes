@@ -12,14 +12,23 @@
       </ul>
     </nav>
     <div class="search-box">
-      <input type="text" placeholder="Tìm kiếm..." >
+      <input type="text" placeholder="Tìm kiếm...">
       <button><i class="fa fa-search"></i></button>
     </div>
     <div class="icon-box">
       <router-link to="/cart"><i class="fa fa-shopping-cart"></i></router-link>
-      <router-link to="/login"><i class="fa-solid fa-right-to-bracket"></i></router-link>
+      <router-link v-if="isLoggedIn" to="/account"><i class="fa fa-user"></i></router-link>
+      <router-link v-else to="/login"><i class="fa-solid fa-right-to-bracket"></i></router-link>
     </div>
   </header>
 </template>
 
-
+<script>
+export default {
+    computed: {
+        isLoggedIn() {
+            return !!localStorage.getItem('user-token');
+        }
+    }
+}
+</script>

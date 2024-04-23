@@ -167,9 +167,9 @@ a:hover {
 }
 
 .product-list {
-  width: 80%;
+  width: 100%;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
@@ -473,7 +473,7 @@ form input[type="checkbox"]:checked + label span:before {
 
 .h1-login {
   text-align: center;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 .form-login {
@@ -501,7 +501,8 @@ form button[type="submit"] {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .a-login {
@@ -520,7 +521,7 @@ form button[type="submit"]:hover {
 }
 /* --------------------------------Register----------------------------------------- */
 .register-container {
-  max-width: 800px;
+  max-width: 500px;
   margin: 40px auto 80px auto;
   padding: 20px;
   background-color: #fff;
@@ -533,12 +534,11 @@ form button[type="submit"]:hover {
   border-radius: 10px;
   border: none;
   background-color: #f4f4f4;
-  margin-bottom: 20px;
 }
 
 .input-row {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 

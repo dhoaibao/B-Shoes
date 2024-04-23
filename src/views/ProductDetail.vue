@@ -9,10 +9,10 @@
                 <p class="product-price">{{ product.price }}đ</p>
                 <p class="product-description">{{ product.description }}</p>
                 <form>
-                    <label for="size-select">Size:</label>
+                    <!-- <label for="size-select">Size:</label>
                     <select id="size-select">
                         <option v-for="size in product.sizes" :key="size">{{ size }}</option>
-                    </select>
+                    </select> -->
                     <label for="quantity-select">Quantity:</label>
                     <input type="number" id="quantity-select" name="quantity" min="1" max="100" v-model.number="quantity" />
                     <button type="submit" @click.prevent="addToCart">Add to cart</button>

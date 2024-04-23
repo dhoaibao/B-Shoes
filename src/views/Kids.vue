@@ -1,6 +1,6 @@
 <template>
     <div class="container-main">
-        <Filter />
+        <!-- <Filter /> -->
         <ProductList :products="products" />
     </div>
 </template>

@@ -7,10 +7,10 @@
         <div class="button"><router-link to="/featured" class="router-link">Mua sắm ngay</router-link></div>
         </div>
       </section>
-      <section class="products">
-        <h2>Sản phẩm nổi bật</h2>
+      <!-- <section class="products"> -->
+         <!-- <h2>Sản phẩm nổi bật</h2> -->
         <!-- <ProductList :products="products" /> -->
-      </section>
+      <!-- </section> -->
     </main>
   </template>
 
@@ -27,7 +27,16 @@ export default {
             products: [],
         };
     },
+    mounted() {
+        if (!localStorage.getItem('reloaded')) {
+            this.refreshPage();
+            localStorage.setItem('reloaded', true);
+        }
+    },
     methods: {
+        refreshPage() {
+            this.$router.go();
+        },
         async retrieveProducts() {
             try {
                 const response = await ProductService.getAll();
